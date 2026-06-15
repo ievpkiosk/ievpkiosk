@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+  background:#f4f7fb;
+  user-select:none;
+  touch-action:manipulation;
+  height:100%;
+}
+
+/* PAGE LAYOUT (FOOTER ALWAYS BOTTOM) */
+body{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:auto auto 1fr auto;
+}
+
+/* HEADER */
+.header{
+  background:#9D2235;
+  padding:14px;
+  text-align:center;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* SEARCH */
+.search-box{
+  padding:10px;
+  text-align:center;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+#search{
+  width:520px;
+  max-width:92%;
+  padding:12px;
+  font-size:16px;
+  border:1px solid #c9d6e2;
+  border-radius:10px;
+}
+
+/* GRID */
+.container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 180px));
+  gap:10px;
+  padding:10px;
+  justify-content:center;
+}
+
+/* TILE */
+.tile{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  height:55px;
+  width:100%;
+  box-sizing:border-box;
+
+  padding:6px;
+  background:#9D2235;
+  border-radius:10px;
+
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  text-align:center;
+
+  overflow:hidden;
+}
+
+.tile:active{
+  transform:scale(0.97);
+}
+
+.tile:hover{
+  background:#7f1b2b;
+}
+.tile:active{transform:scale(0.97);}
+.tile:hover{background:#7f1b2b;}
+
+/* SECTION */
+.section{
+  grid-column:1/-1;
+  font-size:18px;
+  font-weight:bold;
+  margin:10px 0 5px;
+  color:#9D2235;
+  text-align:center;
+}
+
+.hidden{display:none !important;}
+
+/* FOOTER (ALWAYS BOTTOM) */
+.footer{
+  text-align:center;
+  padding:10px;
+  font-size:11px;
+  color:#777;
+  border-top:1px solid #ddd;
+  background:#f4f7fb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Valsts un starptautiskie portāli</div>
+
+<div class="search-box">
+<input id="search" type="text" placeholder="Meklēt iestādi...">
+</div>
+
+<div class="container" id="tiles">
+
+<!-- GOV -->
+<div class="section">Latvijas valsts iestāžu adreses</div>
+
+<a class="tile" href="https://www.elieta.lv/web/#/pakalpojumi">Latvijas tiesu sistēmas elektroniskie pakalpojumi (E-lieta)</a>
+<a class="tile" href="https://www.ievp.gov.lv/lv">Ieslodzījumu vietu pārvalde</a>
+<a class="tile" href="https://www.knab.gov.lv/lv">Korupcijas novēršanas un apkarošanas birojs</a>
+<a class="tile" href="https://www.vsaczemgale.gov.lv/lv">Valsts sociālās aprūpes centrs “Zemgale”</a>
+<a class="tile" href="https://www.ugf.gov.lv/lv">Uzturlīdzekļu garantiju fonds</a>
+<a class="tile" href="https://www.satv.tiesa.gov.lv/">Satversmes tiesa</a>
+<a class="tile" href="https://www.vdeavk.gov.lv/lv">VDEĀVK</a>
+<a class="tile" href="https://www.mkd.gov.lv/lv">Maksātnespējas kontroles dienests</a>
+<a class="tile" href="http://vvc.gov.lv/">Valsts valodas centrs</a>
+<a class="tile" href="https://www.at.gov.lv/lv">Augstākā tiesa</a>
+<a class="tile" href="https://www.dvi.gov.lv/lv">Datu valsts inspekcija</a>
+<a class="tile" href="https://www.sif.gov.lv/lv">Sabiedrības integrācijas fonds</a>
+<a class="tile" href="https://www.arhivi.gov.lv/lv">Latvijas Nacionālais arhīvs</a>
+<a class="tile" href="http://pkc.gov.lv/">Pārresoru koordinācijas centrs</a>
+<a class="tile" href="https://www.km.gov.lv/lv">Kultūras ministrija</a>
+<a class="tile" href="https://www.bti.gov.lv/lv">Bērnu tiesību aizsardzības inspekcija</a>
+<a class="tile" href="https://www.ikvd.gov.lv/lv">Izglītības kvalitātes valsts dienests</a>
+<a class="tile" href="https://www.vmnvd.gov.lv/lv">Nacionālais veselības dienests</a>
+<a class="tile" href="https://www.mod.gov.lv/">Aizsardzības ministrija</a>
+<a class="tile" href="https://www.tm.gov.lv/lv">Tieslietu ministrija</a>
+<a class="tile" href="https://www.vp.gov.lv/lv">Valsts policija</a>
+<a class="tile" href="https://www.zva.gov.lv/">Zāļu valsts aģentūra</a>
+<a class="tile" href="https://zm.gov.lv/">Zemkopības ministrija</a>
+<a class="tile" href="https://www.pvd.gov.lv/lv">Pārtikas un veterinārais dienests</a>
+<a class="tile" href="https://www.vdi.gov.lv/lv">Valsts darba inspekcija</a>
+<a class="tile" href="https://www.fm.gov.lv/lv">Finanšu ministrija</a>
+<a class="tile" href="https://www.vi.gov.lv/lv">Veselības inspekcija</a>
+<a class="tile" href="https://www.ptac.gov.lv/lv">Patērētāju tiesību aizsardzības centrs</a>
+<a class="tile" href="https://www.varam.gov.lv/lv">Viedās administrācijas un reģionālās attīstības ministrija</a>
+<a class="tile" href="https://www.vzd.gov.lv/lv">Valsts zemes dienests</a>
+<a class="tile" href="https://www.ic.iem.gov.lv/lv">Iekšlietu ministrijas Informācijas centrs</a>
+<a class="tile" href="https://www.viaa.gov.lv/lv">Valsts izglītības attīstības aģentūra</a>
+<a class="tile" href="https://www.vm.gov.lv/lv">Veselības ministrija</a>
+<a class="tile" href="https://www.lm.gov.lv/lv">Labklājības ministrija</a>
+<a class="tile" href="https://www.mk.gov.lv/lv">Valsts kanceleja</a>
+<a class="tile" href="https://www.vsaa.gov.lv/lv">Valsts sociālās apdrošināšanas aģentūra</a>
+<a class="tile" href="https://www.ur.gov.lv/lv/">Uzņēmumu reģistrs</a>
+<a class="tile" href="https://www.ta.gov.lv/lv">Tiesu administrācija</a>
+<a class="tile" href="https://www.pmlp.gov.lv/lv">Pilsonības un migrācijas lietu pārvalde</a>
+<a class="tile" href="https://www.mfa.gov.lv/lv">Ārlietu ministrija</a>
+<a class="tile" href="https://www.nva.gov.lv/lv">Nodarbinātības valsts aģentūra</a>
+<a class="tile" href="https://www.spkc.gov.lv/lv">Slimību profilakses un kontroles centrs</a>
+<a class="tile" href="https://www.em.gov.lv/lv">Ekonomikas ministrija</a>
+<a class="tile" href="https://jpa.gov.lv/">Juridiskās palīdzības administrācija</a>
+<a class="tile" href="https://www.iem.gov.lv/lv">Iekšlietu ministrija</a>
+<a class="tile" href="https://www.nmpd.gov.lv/lv">Neatliekamās medicīniskās palīdzības dienests</a>
+<a class="tile" href="https://sab.gov.lv/">Satversmes aizsardzības birojs</a>
+<a class="tile" href="https://www.siva.gov.lv/lv">Sociālās integrācijas valsts aģentūra</a>
+<a class="tile" href="https://vdd.gov.lv/lv/">Valsts drošības dienests</a>
+<a class="tile" href="https://www.vid.gov.lv/">Valsts ieņēmumu dienests</a>
+<a class="tile" href="https://www.visc.gov.lv/lv">Valsts izglītības satura centrs</a>
+<a class="tile" href="https://www.vpd.gov.lv/lv">Valsts probācijas dienests</a>
+<a class="tile" href="https://www.rs.gov.lv/lv">Valsts robežsardze</a>
+<a class="tile" href="https://www.vsackurzeme.gov.lv/lv">Valsts sociālās aprūpes centrs “Kurzeme”</a>
+<a class="tile" href="https://www.vsaclatgale.gov.lv/lv">Valsts sociālās aprūpes centrs “Latgale”</a>
+<a class="tile" href="https://www.vsacriga.gov.lv/lv">Valsts sociālās aprūpes centrs “Rīga”</a>
+<a class="tile" href="https://www.vteb.gov.lv/lv">Valsts tiesu ekspertīžu birojs</a>
+<a class="tile" href="https://www.vtmec.gov.lv/lv">Valsts tiesu medicīnas ekspertīzes centrs</a>
+<a class="tile" href="https://www.idb.gov.lv/lv">Iekšējās drošības birojs</a>
+<a class="tile" href="https://www.izm.gov.lv/lv">Izglītības un zinātnes ministrija</a>
+
+<!-- NON-GOV -->
+<div class="section">Citi resursi</div>
+
+<a class="tile" href="https://www.vni.lv/">Valsts nekustamie īpašumi</a>
+<a class="tile" href="https://www.cvk.lv/lv">Centrālā vēlēšanu komisija</a>
+<a class="tile" href="https://www.tiesas.lv/">Tiesu portāls Latvijā</a>
+<a class="tile" href="https://www.echr.coe.int/Pages/home.aspx?p=home">Eiropas Cilvēktiesību tiesa</a>
+<a class="tile" href="https://www.tiesibsargs.lv/">Tiesībsargs</a>
+<a class="tile" href="https://www.coe.int/en/web/portal/home">Eiropas Padome</a>
+<a class="tile" href="https://eur-lex.europa.eu/homepage.html">EUR-Lex</a>
+<a class="tile" href="https://www.lps.lv/lv">Latvijas Pašvaldību savienība</a>
+<a class="tile" href="https://www.advokatura.lv/">Latvijas Zvērinātu advokātu kolēģija</a>
+<a class="tile" href="https://lvportals.lv/">LV portāls</a>
+<a class="tile" href="https://hudoc.echr.coe.int/eng">HUDOC</a>
+<a class="tile" href="https://www.ohchr.org/">ANO cilvēktiesības</a>
+<a class="tile" href="https://www.who.int/">Pasaules Veselības organizācija</a>
+<a class="tile" href="https://equineteurope.org/">Equinet</a>
+<a class="tile" href="https://manas.tiesas.lv/">Manas Tiesas</a>
+<a class="tile" href="https://www.likumi.lv/">Likumi.lv</a>
+<a class="tile" href="https://www.vestnesis.lv/">Latvijas Vēstnesis</a>
+
+</div>
+
+<script>
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{
+  const f=search.value.toLowerCase();
+  document.querySelectorAll('.tile').forEach(t=>{
+    t.classList.toggle('hidden', !t.textContent.toLowerCase().includes(f));
+  });
+});
+</script>
+
+<div class="footer">
+  © Ieslodzījuma vietu pārvalde | Iekšējā informācijas sistēma
+</div>
+
+</body>
+</html>
